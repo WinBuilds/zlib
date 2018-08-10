@@ -127,7 +127,7 @@
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -157,13 +157,13 @@
 bld_ml32.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -201,13 +201,13 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
 bld_ml32.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithoutAsm|Win32'">
@@ -240,13 +240,13 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -256,7 +256,7 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
     <ClCompile>
       <Optimization>Disabled</Optimization>
       <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;WIN64;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -285,13 +285,13 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
 bld_ml64.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -331,13 +331,13 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
 bld_ml64.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithoutAsm|x64'">
@@ -372,13 +372,13 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Lib>
     <PostBuildEvent>
-      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"
-copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\$(ProjectName)\"</Command>
+      <Command>mkdir "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zlib.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zconf.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"
+copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
-      <Message>copying headers..</Message>
+      <Message>copying include header files..</Message>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -390,6 +390,7 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
       <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
     </ClCompile>
     <ClCompile Include="..\..\contrib\minizip\ioapi.c" />
+    <ClCompile Include="..\..\contrib\minizip\iowin32.c" />
     <ClCompile Include="..\..\contrib\minizip\unzip.c" />
     <ClCompile Include="..\..\contrib\minizip\zip.c" />
     <ClCompile Include="..\..\crc32.c" />
@@ -413,6 +414,7 @@ copy "$(SolutionDir)..\..\zutil.h" "$(SolutionDir)..\..\..\..\build_msvc14_$(Pla
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\contrib\minizip\ioapi.h" />
+    <ClInclude Include="..\..\contrib\minizip\iowin32.h" />
     <ClInclude Include="..\..\contrib\minizip\unzip.h" />
     <ClInclude Include="..\..\contrib\minizip\zip.h" />
     <ClInclude Include="..\..\crc32.h" />
