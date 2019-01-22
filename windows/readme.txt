@@ -1,7 +1,7 @@
 Build instructions
 ==================
 
-- Open windows\VS2015\zlib.sln with Microsoft Visual C++ 2015 and Rebuild.
+- Open windows\VS2017\zlib.sln with Microsoft Visual C++ 2017 and Rebuild.
 - The manifest constant ZLIB_WINAPI need to be #defined in your application
   when linking to zlibdll.dll. Do not define the old ZLIB_DLL.
 
