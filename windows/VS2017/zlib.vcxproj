@@ -91,8 +91,8 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../..;../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -123,9 +123,9 @@ rem bld_ml32.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>mkdir "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
+copy "..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying include header files..</Message>
@@ -134,8 +134,8 @@ copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
-      <PreprocessorDefinitions>WIN32;ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(SolutionDir)../..;../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
@@ -167,9 +167,9 @@ rem bld_ml32.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>mkdir "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
+copy "..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying include header files..</Message>
@@ -181,7 +181,7 @@ copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(
     </Midl>
     <ClCompile>
       <Optimization>Disabled</Optimization>
-      <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../..;../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;WIN64;ASMV;ASMINF;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -212,9 +212,9 @@ bld_ml64.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>mkdir "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
+copy "..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying include header files..</Message>
@@ -226,7 +226,7 @@ copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(
     </Midl>
     <ClCompile>
       <InlineFunctionExpansion>OnlyExplicitInline</InlineFunctionExpansion>
-      <AdditionalIncludeDirectories>$(SolutionDir)../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)../..;../..;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>ZLIB_WINAPI;_CRT_NONSTDC_NO_DEPRECATE;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_WARNINGS;ASMV;ASMINF;WIN64;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ExceptionHandling>
       </ExceptionHandling>
@@ -258,9 +258,9 @@ bld_ml64.bat</Command>
     </PreBuildEvent>
     <PostBuildEvent>
       <Command>mkdir "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
-copy "$(SolutionDir)..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
+copy "..\..\zlib.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zconf.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"
+copy "..\..\zutil.h" "$(WINBUILDS_ROOT)build_msvc15_$(Platform)\$(Configuration)\include\zlib\"</Command>
     </PostBuildEvent>
     <PostBuildEvent>
       <Message>copying include header files..</Message>
